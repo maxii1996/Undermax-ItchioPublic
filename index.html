@@ -7,19 +7,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Reinicia la fuente para todo el documento */
         body, html {
             width: 100%;
             height: 100%;
             margin: 0;
             padding: 0;
             background-color: rgba(0, 0, 0, 0);
-            font-family: 'Varela Round', sans-serif !important; /* Usa !important para sobrescribir Tailwind */
+            font-family: 'Varela Round', sans-serif !important; /* Forzar uso de Varela Round */
             overflow-x: hidden;
             color: white;
         }
 
-        /* Estilos específicos para las tarjetas */
+        .hover\:text-blue-500:hover{
+            color:#ffffff;
+
+        }
+        
         .news-card, .bundle-card {
             transition: transform .3s ease-in-out, box-shadow 0.3s ease;
             filter: grayscale(0%);
@@ -27,47 +30,34 @@
             position: relative;
             overflow: hidden;
             display: block;
-            background-size: 300% 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            background-size: 200% 100%;
+            background-position: 100%;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             cursor: pointer;
+            color: #ffffff !important; /* Asegura que el texto sea blanco */
         }
 
-        .news-card a, .bundle-card a, .news-card a div, .bundle-card a div, .news-card a:hover, .bundle-card a:hover {
-            color: #ffffff !important; /* !important para sobrescribir cualquier estilo de Tailwind */
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-        }
-
-        .hover\:text-blue-500:hover{
-            color:#ffffff;
-
-        }
-
-        /* Estilos para hover */
+        /* Aplica animación al hacer hover */
         .news-card:hover, .bundle-card:hover {
+            animation: light-sweep 2.5s infinite linear;
             transform: scale(1.05);
-            animation: sweep 3s infinite linear forwards;
         }
 
-        .news-card:hover a, .bundle-card:hover a {
+        @keyframes light-sweep {
+            0% { background-position: 200%; }
+            50% { background-position: 0%; }
+            100% { background-position: 200%; }
+        }
+
+        /* Elimina el cambio de color en hover de Tailwind */
+        .news-card:hover a, .bundle-card:hover a,
+        .news-card a:hover, .bundle-card a:hover,
+        .news-card a:hover div, .bundle-card a:hover div {
+            color: #ffffff !important; /* Asegura que el texto siga siendo blanco */
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.75), 0 0 10px rgba(255, 255, 255, 0.75), 0 0 12px rgba(255, 255, 255, 0.75) !important;
         }
 
-        /* Animaciones */
-        @keyframes glow {
-            from {
-                box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-            }
-            to {
-                box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
-            }
-        }
-
-        @keyframes sweep {
-            0% { background-position: -100% 0; }
-            100% { background-position: 200% 0; }
-        }
-
-        /* Fondo oscuro acrílico */
         .bg-dark-acrylic {
             background-color: rgba(55, 55, 55, 0.09);
             backdrop-filter: blur(10px);
@@ -79,7 +69,11 @@
 <main class="container mx-auto px-4 pt-8 min-h-screen">
     <section>
         <h4 class="text-2xl font-bold text-center mb-6">Latest News</h4>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mb-8">
+            <a href="https://itch.io/s/117864/spring-sale-2024" class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-sm">March 11, 2024</div>
+                <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">Spring Sale starts on 13th!</div>
+            </a>
             <a href="https://undermax.itch.io/expeditions" class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up">
                 <div class="text-sm">March 7, 2024</div>
                 <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">Expeditions is now Available!</div>
