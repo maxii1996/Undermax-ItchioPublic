@@ -13,16 +13,15 @@
             margin: 0;
             padding: 0;
             background-color: rgba(0, 0, 0, 0);
-            font-family: 'Varela Round', sans-serif !important; /* Forzar uso de Varela Round */
+            font-family: 'Varela Round', sans-serif !important;
             overflow-x: hidden;
             color: white;
         }
-
-        .hover\:text-blue-500:hover{
-            color:#ffffff;
-
+    
+        .hover\:text-blue-500:hover {
+            color: #ffffff;
         }
-        
+    
         .news-card, .bundle-card {
             transition: transform .3s ease-in-out, box-shadow 0.3s ease;
             filter: grayscale(0%);
@@ -30,40 +29,38 @@
             position: relative;
             overflow: hidden;
             display: block;
-            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 75%, transparent 100%);
             background-size: 200% 100%;
-            background-position: 100%;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             cursor: pointer;
-            color: #ffffff !important; /* Asegura que el texto sea blanco */
+            color: #ffffff !important;
         }
-
-        /* Aplica animación al hacer hover */
+    
         .news-card:hover, .bundle-card:hover {
-            animation: light-sweep 2.5s infinite linear;
+            animation: light-sweep 4s infinite ease-in-out;
             transform: scale(1.05);
         }
-
+    
         @keyframes light-sweep {
-            0% { background-position: 200%; }
-            50% { background-position: 0%; }
-            100% { background-position: 200%; }
+            0% { background-position: -100% center; }
+            100% { background-position: 100% center; }
         }
-
-        /* Elimina el cambio de color en hover de Tailwind */
+    
         .news-card:hover a, .bundle-card:hover a,
         .news-card a:hover, .bundle-card a:hover,
         .news-card a:hover div, .bundle-card a:hover div {
-            color: #ffffff !important; /* Asegura que el texto siga siendo blanco */
+            color: #ffffff !important;
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.75), 0 0 10px rgba(255, 255, 255, 0.75), 0 0 12px rgba(255, 255, 255, 0.75) !important;
         }
-
+    
         .bg-dark-acrylic {
             background-color: rgba(55, 55, 55, 0.09);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
     </style>
+    
+    
 </head>
 <body class="bg-transparent font-sans leading-normal tracking-normal">
 <main class="container mx-auto px-4 pt-8 min-h-screen">
