@@ -1,38 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
+    max-width: 700px;
+    max-height: 600px;
+    margin: 0 auto;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.2); /* Fondo transparente */
     font-family: 'Varela Round', sans-serif;
     overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
 }
+
 
 .news, .bundles {
     padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
 
 h4 {
     text-align: center;
-    padding: 15px 0;
-    margin: 0 0 20px 0;
-    background-color: rgba(36, 36, 80, 0.85);
-    color: white;
-    border-radius: 10px;
+    color: #333;
 }
+
 
 a {
     color: #007bff;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
 }
+
 
 a:hover {
     color: #0056b3;
@@ -51,21 +50,38 @@ a:hover {
     box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
-/* Estilos para la animación de carga y tarjetas */
+.bundles-container, .news-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+
+.bundle-card, .news-card {
+    flex: 0 0 auto;
+    width: 200px; /* Ajuste para cumplir con el requisito */
+    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+.bundle-card img, .news-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 #loading-animation {
+    /* Estilos ajustados para mostrar la animación correctamente */
+    display: none; /* Cambiar a block con JavaScript */
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(-45deg, #eee 25%, transparent 25%, transparent 50%, #eee 50%, #eee 75%, transparent 75%, transparent);
-    background-size: 50px 50px;
-    animation: move 1s linear infinite;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.8) url('ruta/a/una/imagen/de/carga.gif') no-repeat center center;
+    z-index: 10000;
 }
+
 
 @keyframes move {
     0% {
@@ -160,3 +176,5 @@ a:hover {
 .bundle-card:hover img {
     transform: scale(1.05);
 }
+
+
