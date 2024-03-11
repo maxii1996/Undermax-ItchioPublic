@@ -10,3 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('loading-animation').style.display = 'none';
+    }, 1000); // Ajusta este tiempo según lo necesites
+});
