@@ -1,34 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 body, html {
-    font-family: 'Varela Round', sans-serif;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: transparent;
-    overflow-x: hidden;
+    background-color: transparent; /* Fondo transparente */
+    font-family: 'Varela Round', sans-serif;
+    overflow-x: hidden; /* Prevenir desbordamiento horizontal */
+}
+
+.main {
+    padding: 20px;
 }
 
 .news, .bundles {
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo ligeramente transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+    overflow: hidden; /* Asegura que todo quede dentro de los bordes redondeados */
 }
 
-.news h4, .bundles h4 {
-    font-size: 24px;
-    color: #333;
-    padding: 10px;
+h4 {
+    text-align: center;
+    padding: 15px 0;
+    margin: 0 0 20px 0;
+    background-color: rgba(36, 36, 80, 0.85); /* Fondo semi-transparente para los títulos */
+    color: white;
     border-radius: 5px;
-    transition: all 0.3s ease-in-out;
 }
 
+/* Mejoras en los enlaces y animaciones */
 a {
     color: #007bff;
-    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
 }
 
 a:hover {
@@ -36,41 +45,31 @@ a:hover {
     text-decoration: underline;
 }
 
-.bundles-container a, .news-container a {
-    display: inline-block;
-    margin: 5px;
-    transition: transform 0.3s ease;
-}
-
-.bundles-container img, .news-container img {
-    width: 100%;
-    max-width: 165px;
-    transition: transform 0.3s ease;
+/* Estilos y animaciones para las imágenes */
+.bundles-container img {
+    width: 165px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
     border-radius: 5px;
 }
 
-.bundles-container img:hover, .news-container img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* Animaciones para botones y enlaces */
-.button, .icon-button {
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-}
-
-.button:hover, .icon-button:hover {
-    background-color: #0056b3;
+.bundles-container img:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* Mejoras en la animación */
-[data-aos="fade-up"], [data-aos="zoom-in"] {
-    transition: opacity 0.5s ease, transform 0.5s ease;
+/* Tablas con estilo moderno */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+/* Animaciones con AOS */
+[data-aos] {
+    transition: all 0.5s ease-out;
 }
