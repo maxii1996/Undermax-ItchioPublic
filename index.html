@@ -29,23 +29,23 @@
             position: relative;
             overflow: hidden;
             display: block;
-            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 75%, rgba(255, 255, 255, 0) 100%);
-            background-size: 400% 100%; /* Ajustado para un desvanecimiento más suave */
+            background: linear-gradient(120deg, transparent, rgba(197, 197, 197, 0.281), transparent);
+            background-size: 200% 100%;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             color: #ffffff !important;
         }
     
         .news-card:hover, .bundle-card:hover {
-            animation: light-sweep 25s infinite ease-in-out; /* Tiempo ajustado para una transición más natural */
+            animation: light-sweep 11s infinite linear;
             transform: scale(1.05);
         }
     
         @keyframes light-sweep {
-            0%, 100% {
+            from {
                 background-position: 200% center;
             }
-            50% {
+            to {
                 background-position: -200% center;
             }
         }
@@ -63,6 +63,7 @@
             -webkit-backdrop-filter: blur(10px);
         }
     </style>
+    
     
     
     
