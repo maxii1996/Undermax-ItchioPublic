@@ -29,21 +29,25 @@
             position: relative;
             overflow: hidden;
             display: block;
-            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 75%, transparent 100%);
-            background-size: 200% 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 75%, rgba(255, 255, 255, 0) 100%);
+            background-size: 400% 100%; /* Ajustado para un desvanecimiento más suave */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             color: #ffffff !important;
         }
     
         .news-card:hover, .bundle-card:hover {
-            animation: light-sweep 4s infinite ease-in-out;
+            animation: light-sweep 25s infinite ease-in-out; /* Tiempo ajustado para una transición más natural */
             transform: scale(1.05);
         }
     
         @keyframes light-sweep {
-            0% { background-position: -100% center; }
-            100% { background-position: 100% center; }
+            0%, 100% {
+                background-position: 200% center;
+            }
+            50% {
+                background-position: -200% center;
+            }
         }
     
         .news-card:hover a, .bundle-card:hover a,
@@ -59,6 +63,7 @@
             -webkit-backdrop-filter: blur(10px);
         }
     </style>
+    
     
     
 </head>
