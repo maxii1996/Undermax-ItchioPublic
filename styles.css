@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.news, .bundles {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.news h4, .bundles h4 {
+    text-align: center;
+    padding: 15px 0;
+    margin: 0 0 20px 0;
+    background-color: #24245054;
+    color: white;
+}
+
+.news-container table, .bundles-container {
+    width: 100%;
+}
+
+.news-container td, .news-container th {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.bundles-container a {
+    display: inline-block;
+    margin: 10px;
+}
+
+.bundles-container img {
+    width: 165px;
+    transition: transform 0.3s ease;
+}
+
+.bundles-container img:hover {
+    transform: scale(1.1);
+}
+
+/* AOS library classes for animations */
+[data-aos="fade-up"], [data-aos="zoom-in"] {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
