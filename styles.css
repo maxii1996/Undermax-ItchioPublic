@@ -97,3 +97,28 @@ tr:hover {
     transform: scale(1.05);
     filter: grayscale(0%) brightness(120%);
 }
+
+.bg-dark-acrylic {
+    /* Fondo oscuro con opacidad */
+    background-color: rgba(55, 55, 55, 0.8);
+    /* Filtro de desenfoque para efecto acrílico */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.news-card, .bundle-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.news-card:hover, .bundle-card:hover {
+    transform: translateY(-5px);
+}
+
+.text-gray-400 {
+    color: rgba(255, 255, 255, 0.9); /* Texto más claro para contraste */
+}
+
+.text-blue-300:hover {
+    color: #63b3ed; /* Hover efecto para enlaces */
+}
