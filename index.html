@@ -6,6 +6,7 @@
     <title>Welcome Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+ 
     <style>
         body, html {
             width: 100%;
@@ -17,7 +18,7 @@
             overflow-x: hidden;
             color: white;
         }
-
+    
         .news-card, .bundle-card {
             transition: transform .3s ease-in-out, box-shadow 0.3s ease;
             filter: grayscale(0%);
@@ -25,20 +26,27 @@
             position: relative;
             overflow: hidden;
             display: block;
-            color: #ffffff;
             text-decoration: none;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
             background-size: 300% 100%;
-            background-image: linear-gradient(to right, rgba(55, 55, 55, 0), rgba(255, 255, 255, 0.2), rgba(55, 55, 55, 0));
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
-
+    
+        .news-card a, .bundle-card a, .news-card a div, .bundle-card a div {
+            color: #ffffff !important; /* Importante para sobrescribir cualquier estilo de Tailwind */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        }
+    
         .news-card:hover, .bundle-card:hover {
             transform: scale(1.05);
             background-position: 100% 0;
-            animation: glow 1.5s infinite alternate, sweep 1s forwards;
+            animation: glow 1.5s infinite alternate, sweep 1s infinite linear forwards;
         }
-
+    
+        .news-card:hover a, .bundle-card:hover a {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.75), 0 0 10px rgba(255, 255, 255, 0.75), 0 0 12px rgba(255, 255, 255, 0.75) !important; /* Resplandor blanco animado */
+        }
+    
         @keyframes glow {
             from {
                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
@@ -47,19 +55,19 @@
                 box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
             }
         }
-
+    
         @keyframes sweep {
-            to {
-                background-position: 200% 0;
-            }
+            0% { background-position: -100% 0; }
+            100% { background-position: 200% 0; }
         }
-
+    
         .bg-dark-acrylic {
             background-color: rgba(55, 55, 55, 0.09);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
     </style>
+    
 </head>
 <body class="bg-transparent font-sans leading-normal tracking-normal">
 <main class="container mx-auto px-4 pt-8 min-h-screen">
@@ -121,7 +129,6 @@
     </section>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 </html>
