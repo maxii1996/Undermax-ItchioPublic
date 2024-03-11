@@ -1,57 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-body {
+body, html {
     font-family: 'Varela Round', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-}
-
-.text-center {
-    text-align: center;
+    background-color: transparent;
+    overflow-x: hidden;
 }
 
 .news, .bundles {
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
 }
 
 .news h4, .bundles h4 {
-    text-align: center;
-    padding: 15px 0;
-    margin: 0 0 20px 0;
-    background-color: #24245054;
-    color: white;
+    font-size: 24px;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
-.news-container table, .bundles-container {
-    width: 100%;
+a {
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
 }
 
-.news-container td, .news-container th {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
-.bundles-container a {
+.bundles-container a, .news-container a {
     display: inline-block;
-    margin: 10px;
-}
-
-.bundles-container img {
-    width: 165px;
+    margin: 5px;
     transition: transform 0.3s ease;
 }
 
-.bundles-container img:hover {
-    transform: scale(1.1);
+.bundles-container img, .news-container img {
+    width: 100%;
+    max-width: 165px;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
 }
 
-/* AOS library classes for animations */
+.bundles-container img:hover, .news-container img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Animaciones para botones y enlaces */
+.button, .icon-button {
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+}
+
+.button:hover, .icon-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Mejoras en la animación */
 [data-aos="fade-up"], [data-aos="zoom-in"] {
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
