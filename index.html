@@ -5,84 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-<div id="loading-animation"></div>
-
-<main>
-    <section class="news">
-        <h4>Latest News</h4>
-        <!-- Swiper container for news -->
-        <div class="swiper newsSwiper">
-            <div class="swiper-wrapper">
-                <!-- Each news item is a slide -->
-                <div class="swiper-slide">
-                    <div class="news-date">March 7, 2024</div>
-                    <div class="news-title"><a href="https://undermax.itch.io/expeditions">Expeditions is now Available!</a></div>
-                </div>
-                <!-- Repeat for other news items -->
-                <div class="swiper-slide">
-                    <div class="news-date">March 7, 2024</div>
-                    <div class="news-title"><a href="https://itch.io/s/117412/march-sale">March Sale is now active!</a></div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="news-date">March 1, 2024</div>
-                    <div class="news-title"><a href="https://itch.io/blog/690811/my-next-plugin-will-be-expeditions">My next plugin will be Expeditions!</a></div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="news-date">February 25, 2024</div>
-                    <div class="news-title"><a href="https://undermax.itch.io/dynamic-online-shop">Dynamic Online Shop is now Available!</a></div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="news-date">February 25, 2024</div>
-                    <div class="news-title"><a href="https://itch.io/blog/687858/my-next-plugin-will-be-dynamic-online-shop">My next plugin will be Dynamic Online Shop!</a></div>
-                </div>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+<main class="container mx-auto px-4 pt-8 min-h-screen">
+    <section>
+        <h4 class="text-2xl font-bold text-center mb-6">Latest News</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <div class="bg-white rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300">
+                <div class="text-sm text-gray-600">March 7, 2024</div>
+                <a href="https://undermax.itch.io/expeditions" class="block mt-2 text-lg leading-tight font-semibold text-blue-600 hover:text-blue-800">Expeditions is now Available!</a>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="bg-white rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300">
+                <div class="text-sm text-gray-600">March 7, 2024</div>
+                <a href="https://itch.io/s/117412/march-sale" class="block mt-2 text-lg leading-tight font-semibold text-blue-600 hover:text-blue-800">March Sale is now active!</a>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300">
+                <div class="text-sm text-gray-600">March 1, 2024</div>
+                <a href="https://itch.io/blog/690811/my-next-plugin-will-be-expeditions" class="block mt-2 text-lg leading-tight font-semibold text-blue-600 hover:text-blue-800">My next plugin will be Expeditions!</a>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300">
+                <div class="text-sm text-gray-600">February 25, 2024</div>
+                <a href="https://undermax.itch.io/dynamic-online-shop" class="block mt-2 text-lg leading-tight font-semibold text-blue-600 hover:text-blue-800">Dynamic Online Shop is now Available!</a>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300">
+                <div class="text-sm text-gray-600">February 25, 2024</div>
+                <a href="https://itch.io/blog/687858/my-next-plugin-will-be-dynamic-online-shop" class="block mt-2 text-lg leading-tight font-semibold text-blue-600 hover:text-blue-800">My next plugin will be Dynamic Online Shop!</a>
+            </div>
         </div>
     </section>
 
-    <section class="bundles">
-        <h4>Our Bundles</h4>
-        <!-- Swiper container for bundles -->
-        <div class="swiper bundlesSwiper">
-            <div class="swiper-wrapper">
-                <!-- Each bundle is a slide -->
-                <div class="swiper-slide">
-                    <a href="https://itch.io/s/111513/plugins-bundle-1">
-                        <img src="https://img.itch.zone/aW1nLzE0MzMxNzg1LnBuZw==/original/ATo6l%2B.png" alt="Plugins Bundle 1" style="max-width:150px;">
-                    </a>
+    <section>
+        <h4 class="text-2xl font-bold text-center mb-6">Our Bundles</h4>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://itch.io/s/111513/plugins-bundle-1" class="transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-white rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMxNzg1LnBuZw==/original/ATo6l%2B.png" alt="Plugins Bundle 1" class="h-32 mx-auto rounded-lg">
                 </div>
-                <!-- Repeat for other bundles -->
-                <div class="swiper-slide">
-                    <a href="https://itch.io/s/111514/plugins-bundle-2">
-                        <img src="https://img.itch.zone/aW1nLzE0MzMxODAyLnBuZw==/original/FwxP7%2B.png" alt="Plugins Bundle 2" style="max-width:150px;">
-                    </a>
+            </a>
+            <a href="https://itch.io/s/111514/plugins-bundle-2" class="transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-white rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMxODAyLnBuZw==/original/FwxP7%2B.png" alt="Plugins Bundle 2" class="h-32 mx-auto rounded-lg">
                 </div>
-                <div class="swiper-slide">
-                    <a href="https://itch.io/s/111515/plugins-bundle-3">
-                        <img src="https://img.itch.zone/aW1nLzE0MzMxODA5LnBuZw==/original/K5tUVN.png" alt="Plugins Bundle 3" style="max-width:150px;">
-                    </a>
+            </a>
+            <a href="https://itch.io/s/111515/plugins-bundle-3" class="transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-white rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMxODA5LnBuZw==/original/K5tUVN.png" alt="Plugins Bundle 3" class="h-32 mx-auto rounded-lg">
                 </div>
-                <div class="swiper-slide">
-                    <a href="https://itch.io/s/111516/plugins-bundle-4">
-                        <img src="https://img.itch.zone/aW1nLzE0MzMyMDA5LnBuZw==/original/CIEED9.png" alt="Plugins Bundle 4" style="max-width:150px;">
-                    </a>
+            </a>
+            <a href="https://itch.io/s/111516/plugins-bundle-4" class="transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-white rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMyMDA5LnBuZw==/original/CIEED9.png" alt="Plugins Bundle 4" class="h-32 mx-auto rounded-lg">
                 </div>
-                <div class="swiper-slide">
-                    <a href="https://itch.io/s/115896/plugins-bundle-5">
-                        <img src="https://img.itch.zone/aW1nLzE0ODQ5Mjg1LnBuZw==/original/X5C1Qv.png" alt="Plugins Bundle 5" style="max-width:150px;">
-                    </a>
+            </a>
+            <a href="https://itch.io/s/115896/plugins-bundle-5" class="transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-white rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                    <img src="https://img.itch.zone/aW1nLzE0ODQ5Mjg1LnBuZw==/original/X5C1Qv.png" alt="Plugins Bundle 5" class="h-32 mx-auto rounded-lg">
                 </div>
-            </div>
-            <div class="swiper-pagination"></div>
+            </a>
         </div>
     </section>
 </main>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="scripts.js"></script>
 </body>
 </html>
