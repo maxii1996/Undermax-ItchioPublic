@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">    
+    <meta http-equiv="Expires" content="0">
     <title>Welcome Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body, html {
+        body,
+        html {
             width: 100%;
             height: 100%;
             margin: 0;
@@ -20,12 +22,13 @@
             overflow-x: hidden;
             color: white;
         }
-    
+
         .hover\:text-blue-500:hover {
             color: #ffffff;
         }
-    
-        .news-card, .bundle-card {
+
+        .news-card,
+        .bundle-card {
             transition: transform .3s ease-in-out, box-shadow 0.3s ease;
             filter: grayscale(0%);
             border-radius: 8px;
@@ -33,107 +36,157 @@
             overflow: hidden;
             display: block;
             background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 75%, rgba(255, 255, 255, 0) 100%);
-            background-size: 400% 100%; 
+            background-size: 400% 100%;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             color: #ffffff !important;
         }
-    
-        .news-card:hover, .bundle-card:hover {
+
+        .news-card:hover,
+        .bundle-card:hover {
             animation: light-sweep 73s infinite ease-in-out;
             transform: scale(1.05);
         }
-    
+
         @keyframes light-sweep {
-            0%, 100% {
+
+            0%,
+            100% {
                 background-position: 500% center;
             }
+
             50% {
                 background-position: -500% center;
             }
         }
-    
-        .news-card:hover a, .bundle-card:hover a,
-        .news-card a:hover, .bundle-card a:hover,
-        .news-card a:hover div, .bundle-card a:hover div {
+
+        .news-card:hover a,
+        .bundle-card:hover a,
+        .news-card a:hover,
+        .bundle-card a:hover,
+        .news-card a:hover div,
+        .bundle-card a:hover div {
             color: #ffffff !important;
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.75), 0 0 10px rgba(255, 255, 255, 0.75), 0 0 12px rgba(255, 255, 255, 0.75) !important;
         }
-    
+
         .bg-dark-acrylic {
             background-color: rgba(55, 55, 55, 0.09);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
     </style>
-    
-    
-    
 </head>
+
 <body class="bg-transparent font-sans leading-normal tracking-normal">
-<main class="container mx-auto px-4 pt-8 min-h-screen">
-    <section>
-        <h4 class="text-2xl font-bold text-center mb-6">Latest News</h4>
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mb-8">
-            <a href="https://itch.io/s/117864/spring-sale-2024" target="_top" class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
-                <div class="text-sm">March 11, 2024</div>
-                <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">Spring Sale starts on 13th!</div>
-            </a>
-            <a href="https://undermax.itch.io/expeditions" target="_top" class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up">
-                <div class="text-sm">March 7, 2024</div>
-                <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">Expeditions is now Available!</div>
-            </a>
-            <a href="https://itch.io/s/117412/march-sale" target="_top" class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
-                <div class="text-sm">March 7, 2024</div>
-                <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">March Sale is now active!</div>
-            </a>
-            <a href="https://itch.io/blog/690811/my-next-plugin-will-be-expeditions" target="_top" class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
-                <div class="text-sm">March 1, 2024</div>
-                <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">My next plugin will be Expeditions!</div>
-            </a>
-            <a href="https://undermax.itch.io/dynamic-online-shop" target="_top" class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
-                <div class="text-sm">February 25, 2024</div>
-                <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">Dynamic Online Shop is now Available!</div>
-            </a>
-            <a href="https://itch.io/blog/687858/my-next-plugin-will-be-dynamic-online-shop" target="_top" class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="400">
-                <div class="text-sm">February 25, 2024</div>
-                <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">My next plugin will be Dynamic Online Shop!</div>
-            </a>
-        </div>
-    </section>
+    <main class="container mx-auto px-4 pt-8 min-h-screen">
+        <section>
+            <h4 class="text-2xl font-bold text-center mb-6">Latest News</h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mb-8">
 
-    <section>
-        <h4 class="text-2xl font-bold text-center mb-6">Our Bundles</h4>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://itch.io/s/111513/plugins-bundle-1" target="_top" class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in">
-                <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
-                    <img src="https://img.itch.zone/aW1nLzE0MzMxNzg1LnBuZw==/original/ATo6l%2B.png" alt="Plugins Bundle 1" class="h-32 mx-auto rounded-lg">
-                </div>
-            </a>
-            <a href="https://itch.io/s/111514/plugins-bundle-2" target="_top" class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="100">
-                <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
-                    <img src="https://img.itch.zone/aW1nLzE0MzMxODAyLnBuZw==/original/FwxP7%2B.png" alt="Plugins Bundle 2" class="h-32 mx-auto rounded-lg">
-                </div>
-            </a>
-            <a href="https://itch.io/s/111515/plugins-bundle-3" target="_top" class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="200">
-                <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
-                    <img src="https://img.itch.zone/aW1nLzE0MzMxODA5LnBuZw==/original/K5tUVN.png" alt="Plugins Bundle 3" class="h-32 mx-auto rounded-lg">
-                </div>
-            </a>
-            <a href="https://itch.io/s/111516/plugins-bundle-4" target="_top" class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="300">
-                <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
-                    <img src="https://img.itch.zone/aW1nLzE0MzMyMDA5LnBuZw==/original/CIEED9.png" alt="Plugins Bundle 4" class="h-32 mx-auto rounded-lg">
-                </div>
-            </a>
-            <a href="https://itch.io/s/115896/plugins-bundle-5" target="_top" class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="400">
-                <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
-                    <img src="https://img.itch.zone/aW1nLzE0ODQ5Mjg1LnBuZw==/original/X5C1Qv.png" alt="Plugins Bundle 5" class="h-32 mx-auto rounded-lg">
-                </div>
-            </a>
-        </div>
-    </section>
-</main>
+                <a href="https://undermax.itch.io/dynamic-switches/devlog/697134/dynamic-switches-v120-available"
+                    target="_top"
+                    class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-sm">February 13, 2024</div>
+                    <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">(Update) Dynamic Switches
+                        v1.2.0 Available!</div>
+                </a>
 
+                <a href="https://itch.io/s/117864/spring-sale-2024" target="_top"
+                    class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-sm">March 11, 2024</div>
+                    <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">Spring Sale starts on
+                        13th!</div>
+                </a>
+                <a href="https://undermax.itch.io/expeditions" target="_top"
+                    class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300"
+                    data-aos="fade-up">
+                    <div class="text-sm">March 7, 2024</div>
+                    <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">Expeditions is now
+                        Available!</div>
+                </a>
+                <a href="https://itch.io/s/117412/march-sale" target="_top"
+                    class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-sm">March 7, 2024</div>
+                    <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">March Sale is now active!
+                    </div>
+                </a>
+                <a href="https://itch.io/blog/690811/my-next-plugin-will-be-expeditions" target="_top"
+                    class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-sm">March 1, 2024</div>
+                    <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">My next plugin will be
+                        Expeditions!</div>
+                </a>
+                <a href="https://undermax.itch.io/dynamic-online-shop" target="_top"
+                    class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-sm">February 25, 2024</div>
+                    <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">Dynamic Online Shop is now
+                        Available!</div>
+                </a>
+                <a href="https://itch.io/blog/687858/my-next-plugin-will-be-dynamic-online-shop" target="_top"
+                    class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-sm">February 25, 2024</div>
+                    <div class="mt-2 text-lg leading-tight font-semibold hover:text-blue-500">My next plugin will be
+                        Dynamic Online Shop!</div>
+                </a>
+            </div>
+        </section>
 
+        <section>
+            <h4 class="text-2xl font-bold text-center mb-6">Our Bundles</h4>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://itch.io/s/111513/plugins-bundle-1" target="_top"
+                    class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in">
+                    <div
+                        class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://img.itch.zone/aW1nLzE0MzMxNzg1LnBuZw==/original/ATo6l%2B.png"
+                            alt="Plugins Bundle 1" class="h-32 mx-auto rounded-lg">
+                    </div>
+                </a>
+                <a href="https://itch.io/s/111514/plugins-bundle-2" target="_top"
+                    class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <div
+                        class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://img.itch.zone/aW1nLzE0MzMxODAyLnBuZw==/original/FwxP7%2B.png"
+                            alt="Plugins Bundle 2" class="h-32 mx-auto rounded-lg">
+                    </div>
+                </a>
+                <a href="https://itch.io/s/111515/plugins-bundle-3" target="_top"
+                    class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <div
+                        class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://img.itch.zone/aW1nLzE0MzMxODA5LnBuZw==/original/K5tUVN.png"
+                            alt="Plugins Bundle 3" class="h-32 mx-auto rounded-lg">
+                    </div>
+                </a>
+                <a href="https://itch.io/s/111516/plugins-bundle-4" target="_top"
+                    class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in"
+                    data-aos-delay="300">
+                    <div
+                        class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://img.itch.zone/aW1nLzE0MzMyMDA5LnBuZw==/original/CIEED9.png"
+                            alt="Plugins Bundle 4" class="h-32 mx-auto rounded-lg">
+                    </div>
+                </a>
+                <a href="https://itch.io/s/115896/plugins-bundle-5" target="_top"
+                    class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in"
+                    data-aos-delay="400">
+                    <div
+                        class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                        <img src="https://img.itch.zone/aW1nLzE0ODQ5Mjg1LnBuZw==/original/X5C1Qv.png"
+                            alt="Plugins Bundle 5" class="h-32 mx-auto rounded-lg">
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
