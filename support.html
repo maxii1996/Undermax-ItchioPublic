@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Support Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0);
+            font-family: 'Varela Round', sans-serif !important;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        .hover\:text-blue-500:hover {
+            color: #ffffff;
+        }
+
+        .news-card,
+        .bundle-card {
+            transition: transform .3s ease-in-out, box-shadow 0.3s ease;
+            filter: grayscale(0%);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 75%, rgba(255, 255, 255, 0) 100%);
+            background-size: 400% 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            color: #ffffff !important;
+        }
+
+        .news-card:hover,
+        .bundle-card:hover {
+            animation: light-sweep 73s infinite ease-in-out;
+            transform: scale(1.05);
+        }
+
+        @keyframes light-sweep {
+
+            0%,
+            100% {
+                background-position: 500% center;
+            }
+
+            50% {
+                background-position: -500% center;
+            }
+        }
+
+        .news-card:hover a,
+        .bundle-card:hover a,
+        .news-card a:hover,
+        .bundle-card a:hover,
+        .news-card a:hover div,
+        .bundle-card a:hover div {
+            color: #ffffff !important;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.75), 0 0 10px rgba(255, 255, 255, 0.75), 0 0 12px rgba(255, 255, 255, 0.75) !important;
+        }
+
+        .bg-dark-acrylic {
+            background-color: rgba(55, 55, 55, 0.09);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<br>
+<body class="bg-transparent font-sans leading-normal tracking-normal">
+    <main class="container mx-auto px-4 pt-8 min-h-screen">
+
+        <section class="mb-8">
+            <div class="flex justify-center items-center gap-20">
+                <a href="https://itch.io/blog/694860/undermax-support-page" target="_top"
+                    class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300 flex justify-center items-center"
+                    style="width: 220px; height: 80px;">
+                    <img src="https://img.itch.zone/aW1nLzE1MzczMDU1LnBuZw==/original/5hpF7V.png"
+                         alt="Support Page Banner">
+                </a>
+                <a href="https://itch.io/blog/692392/undermax-licence-terms" target="_top"
+                    class="news-card bg-dark-acrylic rounded-lg shadow p-4 hover:shadow-xl transition-shadow duration-300 flex justify-center items-center"
+                    style="width: 220px; height: 80px;">
+                    <img src="https://img.itch.zone/aW1nLzE1MzczMTE4LnBuZw==/original/UW7tOm.png"
+                         alt="Licence Terms Banner">
+                </a>
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>
