@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,72 +11,236 @@
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxii1996.github.io/Undermax-ItchioPublic/style.css">
+    <style>
+        .bundle-link {
+            display: block;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .bundle-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .plugin-images {
+            position: absolute;
+            top: 0;
+            left: 1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 2;
+        }
+
+        .bundle-link:hover .plugin-images {
+            opacity: 1;
+        }
+
+        .plugin-images img {
+            width: 30%;
+            height: auto;
+            margin: 0.1% 1%;
+            object-fit: cover;
+            animation: glow 2s infinite ease-in-out;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+            }
+        }
+
+        .promo-text {
+            position: absolute;
+            bottom: 20px;
+            left: 80%;
+            transform: translateX(-50%);
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 11px 10px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            width: auto;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 54;
+        }
+
+        .bundle-link:hover .promo-text {
+            opacity: 1;
+        }
+    </style>
 </head>
+
 <body class="bg-transparent font-sans leading-normal tracking-normal">
     <main class="container mx-auto px-4 pt-8 min-h-screen">
         <section>
             <h4 class="text-2xl font-bold text-center mb-6">Our Numerical Bundles</h4>
-            <div class="grid grid-cols-3 items-center gap-5">
-
-                <a href="https://itch.io/s/111513/plugins-bundle-1" target="_top" class="bundle-link transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in">
-                    <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
-                        <img src="https://img.itch.zone/aW1nLzE0MzMxNzg1LnBuZw==/original/ATo6l%2B.png" alt="Plugins Bundle 1" class="h-auto w-full object-cover rounded-lg">
-                    </div>
-                    <div class="plugin-images hidden">
-                        <img src="https://img.itch.zone/aW1nLzE0MzI5MTkyLnBuZw==/315x250%23c/A%2F0BAJ.png" alt="Plugin 1">
-                        <img src="https://img.itch.zone/aW1nLzE0MzI5MjQwLnBuZw==/315x250%23c/XxwNg%2F.png" alt="Plugin 2">
-                        <img src="https://img.itch.zone/aW1nLzE0MzI5MzQyLnBuZw==/315x250%23c/d6tuBa.png" alt="Plugin 3">
-                        <img src="https://img.itch.zone/aW1nLzE0MzMxNTU5LnBuZw==/315x250%23c/aJ%2BUZ0.png" alt="Plugin 4">
-                        <img src="https://img.itch.zone/aW1nLzE0MzI5NTA4LnBuZw==/315x250%23c/bfUxSl.png" alt="Plugin 5">
-                    </div>
-                </a>
-                
-
-                <a href="https://itch.io/s/111514/plugins-bundle-2" target="_top"
-                    class="transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in"
-                    data-aos-delay="100">
-                    <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
-                        <img src="https://img.itch.zone/aW1nLzE0MzMxODAyLnBuZw==/original/FwxP7%2B.png"
-                            alt="Plugins Bundle 2" class="h-auto w-full object-cover rounded-lg">
-                    </div>
-                </a>
-
-                <a href="https://itch.io/s/111515/plugins-bundle-3" target="_top"
-                    class="transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in"
-                    data-aos-delay="200">
-                    <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
-                        <img src="https://img.itch.zone/aW1nLzE0MzMxODA5LnBuZw==/original/K5tUVN.png"
-                            alt="Plugins Bundle 3" class="h-auto w-full object-cover rounded-lg">
-                    </div>
-                </a>
-
-                <a href="https://itch.io/s/111516/plugins-bundle-4" target="_top"
-                    class="transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in"
-                    data-aos-delay="300">
-                    <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
-                        <img src="https://img.itch.zone/aW1nLzE0MzMyMDA5LnBuZw==/original/CIEED9.png"
-                            alt="Plugins Bundle 4" class="h-auto w-full object-cover rounded-lg">
-                    </div>
-                </a>
-
-                <a href="https://itch.io/s/115896/plugins-bundle-5" target="_top"
-                    class="transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in"
-                    data-aos-delay="400">
-                    <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
-                        <img src="https://img.itch.zone/aW1nLzE0ODQ5Mjg1LnBuZw==/original/X5C1Qv.png"
-                            alt="Plugins Bundle 5" class="h-auto w-full object-cover rounded-lg">
-                    </div>
-                </a>
-
-                    <div class="flex justify-center w-full">
-                        <div class="transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="500" style="margin-top: auto; margin-bottom: auto;">
-                            <div class="bg-dark-acrylic rounded-lg shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300 flex items-center justify-center h-20">
-                                <p style="font-family: 'Varela Round', sans-serif !important; font-weight: 700;">#6 Coming Soon...</p>
+            <div class="grid grid-cols-3 gap-5">
+                <div class="bundle-container">
+                    <a href="https://itch.io/s/111513/plugins-bundle-1" target="_top"
+                        class="bundle-link transform hover:scale-105 transition-transform duration-300"
+                        data-aos="zoom-in">
+                        <div
+                            class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                            <img src="https://img.itch.zone/aW1nLzE0MzMxNzg1LnBuZw==/original/ATo6l%2B.png"
+                                alt="Plugins Bundle 1" class="h-auto w-full object-cover rounded-lg">
+                            <div class="plugin-images">
+                                <img src="https://img.itch.zone/aW1nLzE0MzI5MTkyLnBuZw==/315x250%23c/A%2F0BAJ.png"
+                                    alt="Plugin 1">
+                                <img src="https://img.itch.zone/aW1nLzE0MzI5MjQwLnBuZw==/315x250%23c/XxwNg%2F.png"
+                                    alt="Plugin 2">
+                                <img src="https://img.itch.zone/aW1nLzE0MzI5MzQyLnBuZw==/315x250%23c/d6tuBa.png"
+                                    alt="Plugin 3">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMxNTU5LnBuZw==/315x250%23c/aJ%2BUZ0.png"
+                                    alt="Plugin 4">
+                                <img src="https://img.itch.zone/aW1nLzE0MzI5NTA4LnBuZw==/315x250%23c/bfUxSl.png"
+                                    alt="Plugin 5">
                             </div>
+                            <div class="promo-text">Only $19.99!</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Bundle 2 -->
+                <div class="bundle-container">
+                    <a href="https://itch.io/s/111514/plugins-bundle-2" target="_top"
+                        class="bundle-link transform hover:scale-105 transition-transform duration-300"
+                        data-aos="zoom-in" data-aos-delay="100">
+                        <div
+                            class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                            <img src="https://img.itch.zone/aW1nLzE0MzMxODAyLnBuZw==/original/FwxP7%2B.png"
+                                alt="Plugins Bundle 2" class="h-auto w-full object-cover rounded-lg">
+                            <div class="plugin-images">
+                                <img src="https://img.itch.zone/aW1nLzE0MzI5NjkwLnBuZw==/315x250%23c/48hJds.png"
+                                    alt="Plugin 1">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMwMDE2LnBuZw==/315x250%23c/isqm2G.png"
+                                    alt="Plugin 2">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMwMTM1LnBuZw==/315x250%23c/isWsPU.png"
+                                    alt="Plugin 3">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMwMjY2LnBuZw==/315x250%23c/ooW1qj.png"
+                                    alt="Plugin 4">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMwNDc3LnBuZw==/315x250%23c/Dwc14B.png"
+                                    alt="Plugin 5">
+                            </div>
+                            <div class="promo-text">Only $19.99!</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Bundle 3 -->
+                <div class="bundle-container">
+                    <a href="https://itch.io/s/111515/plugins-bundle-3" target="_top"
+                        class="bundle-link transform hover:scale-105 transition-transform duration-300"
+                        data-aos="zoom-in" data-aos-delay="200">
+                        <div
+                            class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                            <img src="https://img.itch.zone/aW1nLzE0MzMxODA5LnBuZw==/original/K5tUVN.png"
+                                alt="Plugins Bundle 3" class="h-auto w-full object-cover rounded-lg">
+                            <div class="plugin-images">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMwNTc2LnBuZw==/315x250%23c/wnEZxO.png"
+                                    alt="Plugin 1">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMwNjg3LnBuZw==/315x250%23c/RzZn18.png"
+                                    alt="Plugin 2">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMwNzY2LnBuZw==/315x250%23c/LlFkzo.png"
+                                    alt="Plugin 3">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMwODI4LnBuZw==/315x250%23c/9HAD1I.png"
+                                    alt="Plugin 4">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMwOTk1LnBuZw==/315x250%23c/IhlTjc.png"
+                                    alt="Plugin 5">
+                            </div>
+                            <div class="promo-text">Only $19.99!</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Bundle 4 -->
+                <div class="bundle-container">
+                    <a href="https://itch.io/s/111516/plugins-bundle-4" target="_top"
+                        class="bundle-link transform hover:scale-105 transition-transform duration-300"
+                        data-aos="zoom-in" data-aos-delay="300">
+                        <div
+                            class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                            <img src="https://img.itch.zone/aW1nLzE0MzMyMDA5LnBuZw==/original/CIEED9.png"
+                                alt="Plugins Bundle 4" class="h-auto w-full object-cover rounded-lg">
+                            <div class="plugin-images">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMxMDczLnBuZw==/315x250%23c/5WMivo.png"
+                                    alt="Plugin 1">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMxMjEzLnBuZw==/315x250%23c/edtoKr.png"
+                                    alt="Plugin 2">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMxMjc5LnBuZw==/315x250%23c/mSHBPi.png"
+                                    alt="Plugin 3">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMxMzU3LnBuZw==/315x250%23c/G5gCDw.png"
+                                    alt="Plugin 4">
+                                <img src="https://img.itch.zone/aW1nLzE0MzMxMzkwLnBuZw==/315x250%23c/QMXin7.png"
+                                    alt="Plugin 5">
+                            </div>
+                            <div class="promo-text">Only $19.99!</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Bundle 5 -->
+                <div class="bundle-container">
+                    <a href="https://itch.io/s/115896/plugins-bundle-5" target="_top"
+                        class="bundle-link transform hover:scale-105 transition-transform duration-300"
+                        data-aos="zoom-in" data-aos-delay="400">
+                        <div
+                            class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                            <img src="https://img.itch.zone/aW1nLzE0ODQ5Mjg1LnBuZw==/original/X5C1Qv.png"
+                                alt="Plugins Bundle 5" class="h-auto w-full object-cover rounded-lg">
+                            <div class="plugin-images">
+                                <img src="https://img.itch.zone/aW1nLzE0MzY2NjYxLnBuZw==/315x250%23c/v7blTL.png"
+                                    alt="Plugin 1">
+                                <img src="https://img.itch.zone/aW1nLzE0NDgzODIxLnBuZw==/315x250%23c/gEcNZf.png"
+                                    alt="Plugin 2">
+                                <img src="https://img.itch.zone/aW1nLzE0NjE3NzgwLnBuZw==/315x250%23c/JepU0S.png"
+                                    alt="Plugin 3">
+                                <img src="https://img.itch.zone/aW1nLzE0ODExNjMyLnBuZw==/315x250%23c/stPymV.png"
+                                    alt="Plugin 4">
+                                <img src="https://img.itch.zone/aW1nLzE0OTk2Mzg0LnBuZw==/315x250%23c/oxch9g.png"
+                                    alt="Plugin 5">
+                            </div>
+                            <div class="promo-text">Only $19.99!</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="flex justify-center w-full">
+                    <div class="transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in"
+                        data-aos-delay="500" style="margin-top: auto; margin-bottom: auto;">
+                        <div
+                            class="bg-dark-acrylic rounded-lg shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300 flex items-center justify-center h-20">
+                            <p style="font-family: 'Varela Round', sans-serif !important; font-weight: 700;">#6 Coming
+                                Soon...</p>
                         </div>
                     </div>
+                </div>
 
-        </section>  
+        </section>
     </main>
+
 </body>
+
 </html>
