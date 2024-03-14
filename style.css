@@ -66,3 +66,39 @@
     .font-varela {
         font-family: 'Varela Round', sans-serif !important;
     }
+
+    .bundle-link {
+        position: relative;
+        display: block;
+    }
+    
+    .plugin-images {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px;
+        background-color: rgba(0,0,0,0.7); 
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        z-index: 10;
+        width: 90%;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    
+    .bundle-link:hover .plugin-images {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .plugin-images img {
+        height: 100px; /* Ajusta esto según el tamaño deseado */
+        border-radius: 5px;
+    }
+    
