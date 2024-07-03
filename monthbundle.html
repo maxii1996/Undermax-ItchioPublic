@@ -9,30 +9,103 @@
     <title>Season Sales</title>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-     <link rel="stylesheet" href="https://maxii1996.github.io/Undermax-ItchioPublic/style.css">
-    
+    <link rel="stylesheet" href="https://maxii1996.github.io/Undermax-ItchioPublic/style.css">
+    <style>
+        @keyframes summerBorder {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .summer-border {
+            border-radius: 15px;
+            padding: 5px;
+            background: linear-gradient(90deg, #FF6347, #FFD700, #fa8e00, #ffc812, #FF6347);
+            background-size: 200% 200%;
+            animation: summerBorder 10s linear infinite;
+            position: relative;
+        }
+
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: #FFD700;
+            opacity: 0;
+            border-radius: 50%;
+            animation: fall 1s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body class="bg-transparent font-sans leading-normal tracking-normal">
     <main class="container mx-auto px-4 pt-8 min-h-screen">
 
-
-    
-
         <section>
+            <h4 class="text-2xl font-bold text-center mb-6">Summer Sale 2024</h4>
+            <div class="flex flex-wrap justify-center gap-3 mb-6">
+                <a href="https://itch.io/s/127899/summer-sale-2024" target="_top"
+                    class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in" onmouseover="showConfetti(this)" onmouseout="hideConfetti(this)">
+                    <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300 summer-border">
+                        <img src="https://img.itch.zone/aW1nLzE2Nzg5NDE1LnBuZw==/original/wLL5Db.png" alt="Summer Sale 2024" class="mx-auto rounded-lg" style="width: 480px; height: 300px;">
+                        <div class="confetti-container"></div>
+                    </div>
+                </a>
+            </div>
+
             <h4 class="text-2xl font-bold text-center mb-6">Summer Bundle 2024</h4>
             <div class="flex flex-wrap justify-center gap-3">
                 <a href="https://undermax.itch.io/summer-bundle-2024" target="_top"
                     class="bundle-card transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in">
-                    <div
-                        class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="bg-dark-acrylic rounded-lg shadow-lg p-2 hover:shadow-2xl transition-shadow duration-300">
                         <img src="https://img.itch.zone/aW1nLzE2NDEyNTUzLnBuZw==/original/ArZBaB.png" alt="Season Sale" class="mx-auto rounded-lg" style="width: 480px; height: 300px;">
                     </div>
                 </a>
-        </section>  
-
+            </div>
+        </section>
 
     </main>
+    <script>
+        function createConfettiPiece() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            const colors = ['#FF6347', '#FFD700', '#fa8e00', '#ffc812'];
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.left = `${Math.random() * 100}%`;
+            confetti.style.animationDelay = `${Math.random() * 1}s`;
+            return confetti;
+        }
 
+        function showConfetti(element) {
+            const container = element.querySelector('.confetti-container');
+            for (let i = 0; i < 10; i++) {
+                const confetti = createConfettiPiece();
+                container.appendChild(confetti);
+            }
+        }
 
+        function hideConfetti(element) {
+            const container = element.querySelector('.confetti-container');
+            container.innerHTML = '';
+        }
+    </script>
 </body>
 </html>
