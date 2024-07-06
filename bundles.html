@@ -17,90 +17,98 @@
         }
 
         .menu {
-        display: grid;
-        grid-template-columns: 1fr repeat(7, 1fr);
-        gap: 10px;
-        background: linear-gradient(135deg, #63a4ff5a 0%, #83eaf189 100%);
-        padding: 10px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        transition: background-color 0.3s ease;
-    }
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            background: linear-gradient(135deg, #63a4ff5a 0%, #83eaf189 100%);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
 
-    .menu div {
-        text-align: center;
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-        padding: 10px;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
 
-    .menu div:hover {
-        background-color: #1c85eee9;
-        transform: scale(1.1);
-    }
+        .menu div {
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            min-width: 100px;
+            border-radius: 5px;
+        }
 
-    .content {
-        display: none;
-        grid-template-columns: 1fr repeat(5, 1fr);
-        gap: 10px;
-        padding: 10px;
-        border-radius: 10px;
-        margin-top: 10px;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-    }
 
-    .content.active {
-        display: grid;
-        opacity: 1;
-        transform: translateY(0);
-    }
+        .menu div:hover {
+            background-color: #1c85eee9;
+            transform: scale(1.1);
+        }
 
-    .promo {
-        grid-column: span 1;
-        background: linear-gradient(135deg, #63a4ffdf 0%, #83eaf1d0 100%);
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        font-size: 0.75rem; /* Tamaño del texto ajustado */
-        font-weight: bold;
-        max-width: 13rem;
-        max-height: 3rem;
-        padding: 2px 4px; /* Tamaño del fondo ajustado */
-    }
+        .content {
+            display: none;
+            grid-template-columns: 1fr repeat(5, 1fr);
+            gap: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
 
-    .plugin img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 5px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
 
-    .plugin {
-        grid-column: span 1;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 0.5s forwards;
-    }
-
-    @keyframes fadeIn {
-        to {
+        .content.active {
+            display: grid;
             opacity: 1;
             transform: translateY(0);
         }
-    }
 
-    .plugin:hover img {
-        transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-</style>
+        .promo {
+            grid-column: span 1;
+            background: linear-gradient(135deg, #63a4ffdf 0%, #83eaf1d0 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            max-width: 10rem;
+            max-height: 2rem;
+            padding: 2px 4px;
+        }
+
+
+        .plugin img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+
+        .plugin {
+            grid-column: span 1;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .plugin:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 
 <body>
@@ -216,19 +224,23 @@
             <div id="bundle-6" class="content">
                 <div class="promo">Only $19.99</div>
                 <a class="plugin" href="https://itch.io/s/122444/plugins-bundle-6" target="_top">
-                    <img src="https://img.itch.zone/aW1hZ2UvMjY2MjI4My8xNTg2MzgxOC5wbmc=/original/lCMDhr.png" alt="Plugin 1">
+                    <img src="https://img.itch.zone/aW1hZ2UvMjY2MjI4My8xNTg2MzgxOC5wbmc=/original/lCMDhr.png"
+                        alt="Plugin 1">
                 </a>
                 <a class="plugin" href="https://itch.io/s/122444/plugins-bundle-6" target="_top">
-                    <img src="https://img.itch.zone/aW1hZ2UvMjYxNDA0OS8xNTU3MTI3Ny5wbmc=/original/rsYYNn.png" alt="Plugin 2">
+                    <img src="https://img.itch.zone/aW1hZ2UvMjYxNDA0OS8xNTU3MTI3Ny5wbmc=/original/rsYYNn.png"
+                        alt="Plugin 2">
                 </a>
                 <a class="plugin" href="https://itch.io/s/122444/plugins-bundle-6" target="_top">
-                    <img src="https://img.itch.zone/aW1hZ2UvMjU5ODI2MS8xNTg2NzM0Mi5wbmc=/original/zZlrvI.png" alt="Plugin 3">
+                    <img src="https://img.itch.zone/aW1hZ2UvMjU5ODI2MS8xNTg2NzM0Mi5wbmc=/original/zZlrvI.png"
+                        alt="Plugin 3">
                 </a>
                 <a class="plugin" href="https://itch.io/s/122444/plugins-bundle-6" target="_top">
                     <img src="https://img.itch.zone/aW1nLzE1Mjk4MTY4LnBuZw==/original/sN5EZZ.png" alt="Plugin 4">
                 </a>
                 <a class="plugin" href="https://itch.io/s/122444/plugins-bundle-6" target="_top">
-                    <img src="https://img.itch.zone/aW1hZ2UvMjU0OTA2Mi8xNTE3MzgwOC5wbmc=/original/ie3Hwf.png" alt="Plugin 5">
+                    <img src="https://img.itch.zone/aW1hZ2UvMjU0OTA2Mi8xNTE3MzgwOC5wbmc=/original/ie3Hwf.png"
+                        alt="Plugin 5">
                 </a>
             </div>
 
