@@ -10,157 +10,244 @@
     <title>Support Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxii1996.github.io/Undermax-ItchioPublic/style.css">
     <style>
-        .menu {
-            display: grid;
-            grid-template-columns: 1fr repeat(7, 1fr);
-            gap: 10px;
-            background-color: #1E90FF;
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu div {
-            text-align: center;
+        body {
+            font-family: 'Varela Round', sans-serif;
             color: white;
-            font-weight: bold;
-            cursor: pointer;
-            padding: 10px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .menu div:hover {
-            background-color: #1C86EE;
-            transform: scale(1.1);
-        }
+        .menu {
+        display: grid;
+        grid-template-columns: 1fr repeat(7, 1fr);
+        gap: 10px;
+        background: linear-gradient(135deg, #63a4ff 0%, #83eaf1 100%);
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease;
+    }
 
-        .content {
-            display: none;
-            grid-template-columns: 1fr repeat(5, 1fr);
-            gap: 10px;
-            padding: 10px;
-            border-radius: 10px;
-            margin-top: 10px;
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
+    .menu div {
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
 
-        .content.active {
-            display: grid;
+    .menu div:hover {
+        background-color: #1C86EE;
+        transform: scale(1.1);
+    }
+
+    .content {
+        display: none;
+        grid-template-columns: 1fr repeat(5, 1fr);
+        gap: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .content.active {
+        display: grid;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .promo {
+        grid-column: span 1;
+        background: linear-gradient(135deg, #63a4ff 0%, #83eaf1 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        font-size: 0.75rem; /* Tamaño del texto ajustado */
+        font-weight: bold;
+        max-width: 13rem;
+        max-height: 3rem;
+        padding: 2px 4px; /* Tamaño del fondo ajustado */
+    }
+
+    .plugin img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .plugin {
+        grid-column: span 1;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.5s forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
             opacity: 1;
             transform: translateY(0);
         }
+    }
 
-        .promo {
-            grid-column: span 1;
-            background-color: rgba(23, 24, 25, 0.622);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .plugin img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        .plugin {
-            grid-column: span 1;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .plugin:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    .plugin:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+</style>
 </head>
 
-<body class="bg-transparent font-sans leading-normal tracking-normal">
+<body>
     <main class="container mx-auto px-4 pt-8 min-h-screen">
         <section>
             <h4 class="text-2xl font-bold text-center mb-6">Our Numerical Bundles</h4>
             <div class="menu">
-                <div data-bundle="1">Bundle 1</div>
-                <div data-bundle="2">Bundle 2</div>
-                <div data-bundle="3">Bundle 3</div>
-                <div data-bundle="4">Bundle 4</div>
-                <div data-bundle="5">Bundle 5</div>
-                <div data-bundle="6">Bundle 6</div>
-                <div data-bundle="7">Bundle 7</div>
+                <div data-bundle="1">Plugins Bundle 1</div>
+                <div data-bundle="2">Plugins Bundle 2</div>
+                <div data-bundle="3">Plugins Bundle 3</div>
+                <div data-bundle="4">Plugins Bundle 4</div>
+                <div data-bundle="5">Plugins Bundle 5</div>
+                <div data-bundle="6">Plugins Bundle 6</div>
+                <div data-bundle="7">Plugins Bundle 7</div>
             </div>
 
             <div id="bundle-1" class="content">
                 <div class="promo">Only $19.99</div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzI5MTkyLnBuZw==/315x250%23c/A%2F0BAJ.png" alt="Plugin 1"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzI5MjQwLnBuZw==/315x250%23c/XxwNg%2F.png" alt="Plugin 2"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzI5MzQyLnBuZw==/315x250%23c/d6tuBa.png" alt="Plugin 3"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMxNTU5LnBuZw==/315x250%23c/aJ%2BUZ0.png" alt="Plugin 4"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzI5NTA4LnBuZw==/315x250%23c/bfUxSl.png" alt="Plugin 5"></div>
+                <a class="plugin" href="https://itch.io/s/111513/plugins-bundle-1" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzI5MTkyLnBuZw==/315x250%23c/A%2F0BAJ.png" alt="Plugin 1">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111513/plugins-bundle-1" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzI5MjQwLnBuZw==/315x250%23c/XxwNg%2F.png" alt="Plugin 2">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111513/plugins-bundle-1" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzI5MzQyLnBuZw==/315x250%23c/d6tuBa.png" alt="Plugin 3">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111513/plugins-bundle-1" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMxNTU5LnBuZw==/315x250%23c/aJ%2BUZ0.png" alt="Plugin 4">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111513/plugins-bundle-1" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzI5NTA4LnBuZw==/315x250%23c/bfUxSl.png" alt="Plugin 5">
+                </a>
             </div>
 
             <div id="bundle-2" class="content">
                 <div class="promo">Only $19.99</div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzI5NjkwLnBuZw==/315x250%23c/48hJds.png" alt="Plugin 1"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMwMDE2LnBuZw==/315x250%23c/isqm2G.png" alt="Plugin 2"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMwMTM1LnBuZw==/315x250%23c/isWsPU.png" alt="Plugin 3"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMwMjY2LnBuZw==/315x250%23c/ooW1qj.png" alt="Plugin 4"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMwNDc3LnBuZw==/315x250%23c/Dwc14B.png" alt="Plugin 5"></div>
+                <a class="plugin" href="https://itch.io/s/111514/plugins-bundle-2" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzI5NjkwLnBuZw==/315x250%23c/48hJds.png" alt="Plugin 1">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111514/plugins-bundle-2" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMwMDE2LnBuZw==/315x250%23c/isqm2G.png" alt="Plugin 2">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111514/plugins-bundle-2" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMwMTM1LnBuZw==/315x250%23c/isWsPU.png" alt="Plugin 3">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111514/plugins-bundle-2" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMwMjY2LnBuZw==/315x250%23c/ooW1qj.png" alt="Plugin 4">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111514/plugins-bundle-2" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMwNDc3LnBuZw==/315x250%23c/Dwc14B.png" alt="Plugin 5">
+                </a>
             </div>
 
             <div id="bundle-3" class="content">
                 <div class="promo">Only $19.99</div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMwNTc2LnBuZw==/315x250%23c/wnEZxO.png" alt="Plugin 1"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMwNjg3LnBuZw==/315x250%23c/RzZn18.png" alt="Plugin 2"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMwNzY2LnBuZw==/315x250%23c/LlFkzo.png" alt="Plugin 3"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMwODI4LnBuZw==/315x250%23c/9HAD1I.png" alt="Plugin 4"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMwOTk1LnBuZw==/315x250%23c/IhlTjc.png" alt="Plugin 5"></div>
+                <a class="plugin" href="https://itch.io/s/111515/plugins-bundle-3" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMwNTc2LnBuZw==/315x250%23c/wnEZxO.png" alt="Plugin 1">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111515/plugins-bundle-3" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMwNjg3LnBuZw==/315x250%23c/RzZn18.png" alt="Plugin 2">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111515/plugins-bundle-3" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMwNzY2LnBuZw==/315x250%23c/LlFkzo.png" alt="Plugin 3">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111515/plugins-bundle-3" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMwODI4LnBuZw==/315x250%23c/9HAD1I.png" alt="Plugin 4">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111515/plugins-bundle-3" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMwOTk1LnBuZw==/315x250%23c/IhlTjc.png" alt="Plugin 5">
+                </a>
             </div>
 
             <div id="bundle-4" class="content">
                 <div class="promo">Only $19.99</div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMxMDczLnBuZw==/315x250%23c/5WMivo.png" alt="Plugin 1"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMxMjEzLnBuZw==/315x250%23c/edtoKr.png" alt="Plugin 2"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMxMjc5LnBuZw==/315x250%23c/mSHBPi.png" alt="Plugin 3"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMxMzU3LnBuZw==/315x250%23c/G5gCDw.png" alt="Plugin 4"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzMxMzkwLnBuZw==/315x250%23c/QMXin7.png" alt="Plugin 5"></div>
+                <a class="plugin" href="https://itch.io/s/111516/plugins-bundle-4" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMxMDczLnBuZw==/315x250%23c/5WMivo.png" alt="Plugin 1">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111516/plugins-bundle-4" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMxMjEzLnBuZw==/315x250%23c/edtoKr.png" alt="Plugin 2">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111516/plugins-bundle-4" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMxMjc5LnBuZw==/315x250%23c/mSHBPi.png" alt="Plugin 3">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111516/plugins-bundle-4" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMxMzU3LnBuZw==/315x250%23c/G5gCDw.png" alt="Plugin 4">
+                </a>
+                <a class="plugin" href="https://itch.io/s/111516/plugins-bundle-4" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzMxMzkwLnBuZw==/315x250%23c/QMXin7.png" alt="Plugin 5">
+                </a>
             </div>
 
             <div id="bundle-5" class="content">
                 <div class="promo">Only $19.99</div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0MzY2NjYxLnBuZw==/315x250%23c/v7blTL.png" alt="Plugin 1"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0NDgzODIxLnBuZw==/315x250%23c/gEcNZf.png" alt="Plugin 2"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0NjE3NzgwLnBuZw==/315x250%23c/JepU0S.png" alt="Plugin 3"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0ODExNjMyLnBuZw==/315x250%23c/stPymV.png" alt="Plugin 4"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE0OTk2Mzg0LnBuZw==/315x250%23c/oxch9g.png" alt="Plugin 5"></div>
+                <a class="plugin" href="https://itch.io/s/115896/plugins-bundle-5" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0MzY2NjYxLnBuZw==/315x250%23c/v7blTL.png" alt="Plugin 1">
+                </a>
+                <a class="plugin" href="https://itch.io/s/115896/plugins-bundle-5" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0NDgzODIxLnBuZw==/315x250%23c/gEcNZf.png" alt="Plugin 2">
+                </a>
+                <a class="plugin" href="https://itch.io/s/115896/plugins-bundle-5" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0NjE3NzgwLnBuZw==/315x250%23c/JepU0S.png" alt="Plugin 3">
+                </a>
+                <a class="plugin" href="https://itch.io/s/115896/plugins-bundle-5" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0ODExNjMyLnBuZw==/315x250%23c/stPymV.png" alt="Plugin 4">
+                </a>
+                <a class="plugin" href="https://itch.io/s/115896/plugins-bundle-5" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE0OTk2Mzg0LnBuZw==/315x250%23c/oxch9g.png" alt="Plugin 5">
+                </a>
             </div>
 
             <div id="bundle-6" class="content">
                 <div class="promo">Only $19.99</div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1hZ2UvMjY2MjI4My8xNTg2MzgxOC5wbmc=/original/lCMDhr.png" alt="Plugin 1"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1hZ2UvMjYxNDA0OS8xNTU3MTI3Ny5wbmc=/original/rsYYNn.png" alt="Plugin 2"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1hZ2UvMjU5ODI2MS8xNTg2NzM0Mi5wbmc=/original/zZlrvI.png" alt="Plugin 3"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE1Mjk4MTY4LnBuZw==/original/sN5EZZ.png" alt="Plugin 4"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1hZ2UvMjU0OTA2Mi8xNTE3MzgwOC5wbmc=/original/ie3Hwf.png" alt="Plugin 5"></div>
+                <a class="plugin" href="https://itch.io/s/122444/plugins-bundle-6" target="_top">
+                    <img src="https://img.itch.zone/aW1hZ2UvMjY2MjI4My8xNTg2MzgxOC5wbmc=/original/lCMDhr.png" alt="Plugin 1">
+                </a>
+                <a class="plugin" href="https://itch.io/s/122444/plugins-bundle-6" target="_top">
+                    <img src="https://img.itch.zone/aW1hZ2UvMjYxNDA0OS8xNTU3MTI3Ny5wbmc=/original/rsYYNn.png" alt="Plugin 2">
+                </a>
+                <a class="plugin" href="https://itch.io/s/122444/plugins-bundle-6" target="_top">
+                    <img src="https://img.itch.zone/aW1hZ2UvMjU5ODI2MS8xNTg2NzM0Mi5wbmc=/original/zZlrvI.png" alt="Plugin 3">
+                </a>
+                <a class="plugin" href="https://itch.io/s/122444/plugins-bundle-6" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE1Mjk4MTY4LnBuZw==/original/sN5EZZ.png" alt="Plugin 4">
+                </a>
+                <a class="plugin" href="https://itch.io/s/122444/plugins-bundle-6" target="_top">
+                    <img src="https://img.itch.zone/aW1hZ2UvMjU0OTA2Mi8xNTE3MzgwOC5wbmc=/original/ie3Hwf.png" alt="Plugin 5">
+                </a>
             </div>
 
             <div id="bundle-7" class="content">
                 <div class="promo">Only $19.99</div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE1OTk0Mzg1LnBuZw==/315x250%23c/slFJBV.png" alt="Plugin 1"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE2MDk1MjQwLnBuZw==/315x250%23c/RSInlI.png" alt="Plugin 2"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE2NDMwNTkyLnBuZw==/315x250%23c/DfMP%2Bs.png" alt="Plugin 3"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE2NTYzNDE5LnBuZw==/315x250%23c/pSpaLj.png" alt="Plugin 4"></div>
-                <div class="plugin"><img src="https://img.itch.zone/aW1nLzE2ODE2MTMwLnBuZw==/315x250%23c/9nHWEZ.png" alt="Plugin 5"></div>
+                <a class="plugin" href="https://itch.io/s/128201/plugins-bundle-7" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE1OTk0Mzg1LnBuZw==/315x250%23c/slFJBV.png" alt="Plugin 1">
+                </a>
+                <a class="plugin" href="https://itch.io/s/128201/plugins-bundle-7" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE2MDk1MjQwLnBuZw==/315x250%23c/RSInlI.png" alt="Plugin 2">
+                </a>
+                <a class="plugin" href="https://itch.io/s/128201/plugins-bundle-7" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE2NDMwNTkyLnBuZw==/315x250%23c/DfMP%2Bs.png" alt="Plugin 3">
+                </a>
+                <a class="plugin" href="https://itch.io/s/128201/plugins-bundle-7" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE2NTYzNDE5LnBuZw==/315x250%23c/pSpaLj.png" alt="Plugin 4">
+                </a>
+                <a class="plugin" href="https://itch.io/s/128201/plugins-bundle-7" target="_top">
+                    <img src="https://img.itch.zone/aW1nLzE2ODE2MTMwLnBuZw==/315x250%23c/9nHWEZ.png" alt="Plugin 5">
+                </a>
             </div>
         </section>
     </main>
