@@ -126,7 +126,7 @@
                 <div data-bundle="7">Bundle 7</div>
             </div>
 
-            <div id="bundle-1" class="content">
+            <div id="bundle-1" class="content active">
                 <div class="promo">Only $19.99</div>
                 <a class="plugin" href="https://itch.io/s/111513/plugins-bundle-1" target="_top">
                     <img src="https://img.itch.zone/aW1nLzE0MzI5MTkyLnBuZw==/315x250%23c/A%2F0BAJ.png" alt="Plugin 1">
@@ -272,6 +272,11 @@
                 document.querySelector(`#bundle-${menuItem.dataset.bundle}`).classList.add('active');
             });
         });
+
+        document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector(`#bundle-1`).classList.add('active');
+});
+
     </script>
 </body>
 
